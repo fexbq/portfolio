@@ -91,7 +91,7 @@ a:not(.home-btn) {
 a:not(.home-btn):hover {
   cursor: none;
   color: #415a77;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
   border-bottom-width: 3px;
 }
 
@@ -198,12 +198,12 @@ main {
   display: flex;
   transform: rotate(90deg);
   padding: 0.6rem;
-  border: 2.5px solid #0d1b2a;
+  border: 2.5px solid transparent;
   border-radius: 50%;
 }
 .home-btn:hover {
   padding: 0.6rem;
-  border-bottom: 2.5px solid #0d1b2a;
+  border: 2.5px solid #415a77;
   transform: rotate(90deg) translateY(-0.25rem);
 }
 
