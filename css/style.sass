@@ -121,12 +121,14 @@ main
     width: 80vw
 
   &__links
-    display: flex
     position: fixed
     bottom: 0
-    left: 10%
-    width: 0
-    transform: rotate(-90deg)
+    left: 0
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    gap: 0 2rem
+    transform: rotate(-90deg) translateX(50%) translateY(-150%)
 
 .parallax
   transition-duration: 0s
@@ -141,37 +143,29 @@ main
   display: flex
   font-size: 1.2rem
   letter-spacing: .05rem
-  position: fixed
-  bottom: 5vw
-  left: 2rem
   transition: all .1s
 
   &:hover
     cursor: pointer
-    bottom: 5.2vw
     color: $hover-color
     padding-bottom: 0px
     border-bottom: none
 
 .home-btn
   display: flex
-  bottom: 3.75vw
   transform: rotate(90deg)
   padding: .6rem
   border: 2.5px solid $secondary-color
   border-radius: 50%
 
   &:hover
-    bottom: 3.75vw
-    left: 2.2rem
     padding: .6rem
     border-bottom: 2.5px solid $secondary-color
+    transform: rotate(90deg) translateY(-.25rem)
 
-.projects-btn
-  left: 7rem
-
-.contact-btn
-  left: 14rem
+.projects-btn, .contact-btn
+  position: relative
+  bottom: 1px
 
 @media (max-width: 992px)
   h1

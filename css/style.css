@@ -137,12 +137,14 @@ main {
   width: 80vw;
 }
 .about-page__links {
-  display: flex;
   position: fixed;
   bottom: 0;
-  left: 10%;
-  width: 0;
-  transform: rotate(-90deg);
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 2rem;
+  transform: rotate(-90deg) translateX(50%) translateY(-150%);
 }
 
 .parallax {
@@ -160,16 +162,12 @@ main {
   display: flex;
   font-size: 1.2rem;
   letter-spacing: 0.05rem;
-  position: fixed;
-  bottom: 5vw;
-  left: 2rem;
   transition: all 0.1s;
 }
 .home-btn:hover,
 .projects-btn:hover,
 .contact-btn:hover {
   cursor: pointer;
-  bottom: 5.2vw;
   color: #415a77;
   padding-bottom: 0px;
   border-bottom: none;
@@ -177,25 +175,20 @@ main {
 
 .home-btn {
   display: flex;
-  bottom: 3.75vw;
   transform: rotate(90deg);
   padding: 0.6rem;
   border: 2.5px solid #0d1b2a;
   border-radius: 50%;
 }
 .home-btn:hover {
-  bottom: 3.75vw;
-  left: 2.2rem;
   padding: 0.6rem;
   border-bottom: 2.5px solid #0d1b2a;
+  transform: rotate(90deg) translateY(-0.25rem);
 }
 
-.projects-btn {
-  left: 7rem;
-}
-
-.contact-btn {
-  left: 14rem;
+.projects-btn, .contact-btn {
+  position: relative;
+  bottom: 1px;
 }
 
 @media (max-width: 992px) {
