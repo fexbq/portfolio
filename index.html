@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Portfolio</title>
+  <link rel="shortcut icon" href="img/favicon.svg" type="svg">
+  <script defer src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <main>
+      <h1 id="header-home"></h1>
+      <div id="nav">
+        <button id="about-btn">About</button>
+        <button>Projects</button>
+        <button>Contact</button>
+      </div>
+    </main>
+    <!-- About -->
+    <section class="about-page">
+      <h1 id="header-about"></h1>
+      <div class="about-page__row">
+        <div>
+          <p>
+            I'm a 17 year old developer and designer from the Netherlands.<br>
+            Creative developer who's always open to learn more.
+          </p>
+        </div>
+        <div class="parallax" data-speed=".1">
+          <img src="img/bunny.png" alt="Bunny eating chocolate" class="img-about" draggable="false">
+          <figcaption class="figcaption figcaption__r">
+            <a href="/img/bunny.png" target="_blank">Illustration: Felix × DALL·E</a>
+          </figcaption>
+        </div>
+      </div>
+      <div class="about-page__row">
+        <div class="parallax" data-speed="-.1">
+          <img src="img/astronaut.jpg" alt="Astronaut on a horse" class="img-about" draggable="false">
+          <figcaption class="figcaption figcaption__l">
+            <a href="/img/astronaut.jpg" target="_blank">Illustration: OpenAI × DALL·E</a>
+          </figcaption>
+        </div>
+        <div>
+          <p>
+            I am a student at <b><a href="https://noorderpoort.nl/" target="_blank">Noorderpoort</a></b>
+            in Groningen.<br>Passion for artificial intelligence.
+          </p>
+        </div>
+      </div>
+      <div class="about-page__links">
+        <a class="home-btn">Home</a>
+        <a class="projects-btn">Projects</a>
+        <a class="contact-btn">Contact</a>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

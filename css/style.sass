@@ -1,0 +1,182 @@
+// https://coolors.co/0d1b2a-1b263b-415a77-778da9-e0e1dd
+
+$primary-color: #E0E1DD
+$secondary-color: #0d1b2a
+$hover-color: #415a77
+
+:root
+  --ti-cursor-color: #{ $hover-color}
+
+@font-face
+  font-family: "Soehne"
+  src: url("../fonts/soehne.otf") format("opentype")
+
+@font-face
+  font-family: "Soehne-Fett"
+  src: url("../fonts/soehne-fett.otf") format("opentype")
+
+*
+  font-family: "Soehne", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif
+  text-decoration: none
+  margin: 0
+  padding: 0
+  webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  transition: all 0.5s ease-in-out
+
+body
+  background-color: $primary-color
+  color: $secondary-color
+  overflow: hidden
+  user-select: none
+  transition-duration: 0s
+
+::selection
+  color: $primary-color
+  background: $secondary-color
+
+strong
+  font-family: "Soehne-Fett"
+
+.wrapper
+  display: flex
+  justify-content: center
+  margin-top: 35vh
+
+h1
+  font-size: 6.5rem
+
+p
+  font-size: 1.4rem
+  line-height: 2rem
+
+a
+  color: $secondary-color
+  text-decoration: none
+  width: max-content
+  border: none
+  border-bottom: 0px solid $hover-color
+  transition-duration: 0.1s
+
+  &:hover
+    color: $hover-color
+    padding-bottom: 2px
+    border-bottom-width: 3px
+
+.figcaption
+  font-size: .8rem
+  font-style: italic
+
+  &__l
+    text-align: left
+
+  &__r
+    text-align: right
+
+button
+  display: flex
+  position: relative
+  background: none
+  color: $secondary-color
+  border: none
+  border-bottom: 0px solid $hover-color
+  font-weight: bold
+  font-size: 2rem
+  transition-duration: 0.1s
+
+  &:hover
+    color: $hover-color
+    cursor: pointer
+    padding-bottom: 2px
+    border-bottom-width: 6px
+
+main
+  display: flex
+  flex-direction: column
+  opacity: 1
+
+#nav
+  display: flex
+  justify-content: space-around
+  margin-top: 0vh
+  visibility: hidden
+  opacity: 0
+
+#header-about
+  width: 80vw
+
+.about-page
+  display: none
+  flex-direction: column
+  align-items: center
+  visibility: hidden
+  opacity: 0
+
+  &__row
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 5rem
+    width: 80vw
+
+  &__links
+    display: flex
+    position: fixed
+    bottom: 0
+    left: 10%
+    width: 0
+    transform: rotate(-90deg)
+
+.parallax
+  transition-duration: 0s
+
+.img-about
+  width: 30vw
+  box-shadow: 0px 0px 20px -10px $secondary-color
+
+.home-btn,
+.projects-btn,
+.contact-btn
+  font-size: 1.2rem
+  letter-spacing: .05rem
+  position: fixed
+  bottom: 5vw
+  left: 2rem
+  transition: all .1s
+
+  &:hover
+    cursor: pointer
+    bottom: 5.2vw
+    color: $hover-color
+    padding-bottom: 0px
+    border-bottom: none
+
+.projects-btn
+  left: 8rem
+
+.contact-btn
+  left: 15rem
+
+@media (max-width: 992px)
+  h1
+    font-size: 4rem
+  button
+    font-size: 1.6rem
+
+@media (max-width: 600px)
+  h1
+    font-size: 3rem
+  p
+    font-size: 1rem
+  button
+    font-size: 1.4rem
+  #header-about
+    width: auto
+    font-size: 4.5rem
+    margin-bottom: 4rem
+  .about-page__row
+    flex-direction: column
+    align-items: flex-start
+  .img-about
+    width: 80vw
