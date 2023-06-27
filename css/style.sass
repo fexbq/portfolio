@@ -30,6 +30,28 @@ body
   overflow: hidden
   user-select: none
   transition-duration: 0s
+  cursor: none
+  min-height: 100vh
+
+.cursor-small,
+.cursor-large
+  position: fixed
+  width: 12px
+  height: 12px
+  background: $secondary-color
+  border-radius: 50%
+  transition: all .1s cubic-bezier(0.2, .8, 0.05, 1)
+  // z-index: 2
+
+.cursor-large
+  width: 24px
+  height: 24px
+  background: $hover-color
+  opacity: .5
+  // cubic bezier transition smooth
+  transition: all .25s cubic-bezier(.2, .6, .1, .9)
+
+  // z-index: 1
 
 ::selection
   color: $primary-color
@@ -41,7 +63,7 @@ strong
 .wrapper
   display: flex
   justify-content: center
-  margin-top: 35vh
+  padding-top: 35vh
 
 h1
   font-size: 6.5rem
@@ -59,6 +81,7 @@ a:not(.home-btn)
   transition-duration: 0.1s
 
   &:hover
+    cursor: none
     color: $hover-color
     padding-bottom: 2px
     border-bottom-width: 3px
@@ -85,8 +108,8 @@ button
   transition-duration: 0.1s
 
   &:hover
+    cursor: none
     color: $hover-color
-    cursor: pointer
     padding-bottom: 2px
     border-bottom-width: 6px
 
@@ -146,7 +169,7 @@ main
   transition: all .1s
 
   &:hover
-    cursor: pointer
+    cursor: none
     color: $hover-color
     padding-bottom: 0px
     border-bottom: none

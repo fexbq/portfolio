@@ -5,6 +5,34 @@ const nav = document.getElementById("nav");
 const aboutPage = document.querySelector(".about-page");
 const aboutBtn = document.getElementById("about-btn");
 const homeBtn = document.querySelector(".home-btn");
+const cursorSmall = document.querySelector(".cursor-small");
+const cursorLarge = document.querySelector(".cursor-large");
+
+const positionElement = (e) => {
+  document.body.style.cursor = "none";
+  const mouseY = e.clientY;
+  const mouseX = e.clientX;
+
+  cursorSmall.style.left = mouseX + "px";
+  cursorSmall.style.top = mouseY + "px";
+  cursorLarge.style.left = mouseX - 6 + "px";
+  cursorLarge.style.top = mouseY - 6 + "px";
+};
+
+window.addEventListener("mousemove", positionElement);
+
+// if hovering over a link, change cursorLarge to white
+const links = document.querySelectorAll("a");
+links.forEach((link) => {
+  link.addEventListener("mouseover", () => {
+    cursorSmall.style.backgroundColor = "#415a77";
+    cursorLarge.style.backgroundColor = "#0d1b2a";
+  });
+  link.addEventListener("mouseout", () => {
+    cursorSmall.style.backgroundColor = "#0d1b2a";
+    cursorLarge.style.backgroundColor = "#415a77";
+  });
+});
 
 let aboutVisited = false;
 
@@ -56,7 +84,7 @@ function createAbout() {
     main.style.display = "none";
     aboutPage.style.display = "flex";
     document.body.style.overflow = "visible";
-    wrapper.style.marginTop = "10vh";
+    wrapper.style.paddingTop = "10vh";
     if (aboutVisited === false) {
       new TypeIt("#header-about", {
         speed: 120,
@@ -88,7 +116,7 @@ function homePressed() {
     aboutPage.style.display = "none";
     main.style.opacity = "1";
     main.style.visibility = "visible";
-    wrapper.style.marginTop = "35vh";
+    wrapper.style.paddingTop = "35vh";
   }, 500);
 }
 
