@@ -54,6 +54,7 @@ function createAbout() {
   main.style.visibility = "hidden";
   setTimeout(() => {
     main.style.display = "none";
+    aboutPage.style.display = "flex";
     document.body.style.overflow = "visible";
     wrapper.style.marginTop = "10vh";
     if (aboutVisited === false) {
@@ -66,9 +67,11 @@ function createAbout() {
         .go();
       aboutVisited = true;
     }
-    aboutPage.style.visibility = "visible";
-    aboutPage.style.opacity = "1";
-    aboutPage.style.display = "flex";
+    setTimeout(() => {
+      aboutPage.style.visibility = "visible";
+      aboutPage.style.opacity = "1";
+    }, 50);
+
     homeBtn.addEventListener("click", () => {
       homePressed();
     });
@@ -80,9 +83,9 @@ function homePressed() {
   aboutPage.style.opacity = "0";
   aboutPage.style.visibility = "hidden";
   setTimeout(() => {
+    main.style.display = "flex";
     window.scrollTo(0, 0);
     aboutPage.style.display = "none";
-    main.style.display = "flex";
     main.style.opacity = "1";
     main.style.visibility = "visible";
     wrapper.style.marginTop = "35vh";

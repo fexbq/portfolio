@@ -50,7 +50,7 @@ p
   font-size: 1.4rem
   line-height: 2rem
 
-a
+a:not(.home-btn)
   color: $secondary-color
   text-decoration: none
   width: max-content
@@ -138,6 +138,7 @@ main
 .home-btn,
 .projects-btn,
 .contact-btn
+  display: flex
   font-size: 1.2rem
   letter-spacing: .05rem
   position: fixed
@@ -152,11 +153,25 @@ main
     padding-bottom: 0px
     border-bottom: none
 
+.home-btn
+  display: flex
+  bottom: 3.75vw
+  transform: rotate(90deg)
+  padding: .6rem
+  border: 2.5px solid $secondary-color
+  border-radius: 50%
+
+  &:hover
+    bottom: 3.75vw
+    left: 2.2rem
+    padding: .6rem
+    border-bottom: 2.5px solid $secondary-color
+
 .projects-btn
-  left: 8rem
+  left: 7rem
 
 .contact-btn
-  left: 15rem
+  left: 14rem
 
 @media (max-width: 992px)
   h1

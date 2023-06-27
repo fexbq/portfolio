@@ -59,7 +59,7 @@ p {
   line-height: 2rem;
 }
 
-a {
+a:not(.home-btn) {
   color: #0d1b2a;
   text-decoration: none;
   width: -moz-max-content;
@@ -68,7 +68,7 @@ a {
   border-bottom: 0px solid #415a77;
   transition-duration: 0.1s;
 }
-a:hover {
+a:not(.home-btn):hover {
   color: #415a77;
   padding-bottom: 2px;
   border-bottom-width: 3px;
@@ -157,6 +157,7 @@ main {
 .home-btn,
 .projects-btn,
 .contact-btn {
+  display: flex;
   font-size: 1.2rem;
   letter-spacing: 0.05rem;
   position: fixed;
@@ -174,12 +175,27 @@ main {
   border-bottom: none;
 }
 
+.home-btn {
+  display: flex;
+  bottom: 3.75vw;
+  transform: rotate(90deg);
+  padding: 0.6rem;
+  border: 2.5px solid #0d1b2a;
+  border-radius: 50%;
+}
+.home-btn:hover {
+  bottom: 3.75vw;
+  left: 2.2rem;
+  padding: 0.6rem;
+  border-bottom: 2.5px solid #0d1b2a;
+}
+
 .projects-btn {
-  left: 8rem;
+  left: 7rem;
 }
 
 .contact-btn {
-  left: 15rem;
+  left: 14rem;
 }
 
 @media (max-width: 992px) {
