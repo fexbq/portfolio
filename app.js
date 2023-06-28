@@ -45,16 +45,18 @@ let aboutVisited = false;
 window.scrollTo(0, 0);
 
 // Parallax
-window.addEventListener("scroll", function () {
-  const parallaxElements = document.querySelectorAll(".parallax");
-  const scrollPosition = window.scrollY;
+if (window.innerWidth > 600) {
+  window.addEventListener("scroll", function () {
+    const parallaxElements = document.querySelectorAll(".parallax");
+    const scrollPosition = window.scrollY;
 
-  parallaxElements.forEach(function (element) {
-    const speed = parseFloat(element.getAttribute("data-speed"));
-    const translateY = scrollPosition * speed;
-    element.style.transform = `translateY(${translateY}px)`;
+    parallaxElements.forEach(function (element) {
+      const speed = parseFloat(element.getAttribute("data-speed"));
+      const translateY = scrollPosition * speed;
+      element.style.transform = `translateY(${translateY}px)`;
+    });
   });
-});
+}
 
 // Home
 new TypeIt("#header-home", {
@@ -67,15 +69,15 @@ new TypeIt("#header-home", {
     nav.style.opacity = "1";
   },
 })
-  .type("I'm a developer.", { delay: 0 }) // 1000
-  .delete(10, { delay: 0 }) // 250
-  .type("designer.", { delay: 0 }) // 900
-  .delete(11, { delay: 0 }) // 600
+  .type("I'm a developer", { delay: 0 }) // 1000
+  .delete(9, { delay: 0 }) // 250
+  .type("designer", { delay: 0 }) // 900
+  .delete(10, { delay: 0 }) // 600
   .type("<strong>Felix Nagy</strong>", {
     speed: 100,
   })
   .pause(0) // 400
-  .type(".", { delay: 0 }) // 100
+  // .type(".", { delay: 0 }) // 100
   .go();
 
 // About
@@ -94,10 +96,9 @@ function createAbout() {
     if (aboutVisited === false) {
       new TypeIt("#header-about", {
         speed: 120,
-        startDelay: 80,
+        startDelay: 100,
       })
-        .type("About", { delay: 300 })
-        .type(".")
+        .type("About")
         .go();
       aboutVisited = true;
     }

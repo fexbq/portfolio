@@ -3,11 +3,11 @@
 }
 
 @font-face {
-  font-family: "Soehne";
+  font-family: Soehne;
   src: url("../fonts/soehne.otf") format("opentype");
 }
 @font-face {
-  font-family: "Soehne-Fett";
+  font-family: Soehne-Fett;
   src: url("../fonts/soehne-fett.otf") format("opentype");
 }
 * {
@@ -157,6 +157,9 @@ main {
   margin-bottom: 5rem;
   width: 80vw;
 }
+.about-page__row__left {
+  width: 45vw;
+}
 .about-page__links {
   position: fixed;
   bottom: 0;
@@ -238,6 +241,17 @@ main {
   .about-page__row {
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+  .about-page p {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  .about-page__links {
+    display: none;
+  }
+  .about-page #row2 {
+    flex-direction: column-reverse;
   }
   .img-about {
     width: 80vw;
