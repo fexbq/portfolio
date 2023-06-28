@@ -1,7 +1,3 @@
-:root {
-  --ti-cursor-color: #415a77;
-}
-
 @font-face {
   font-family: Soehne;
   src: url("../fonts/soehne.otf") format("opentype");
@@ -21,13 +17,12 @@
 }
 
 body {
-  background-color: #E0E1DD;
-  color: #1b263b;
+  background-color: #e0e1dd;
+  color: #330610;
   overflow: hidden;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  transition-duration: 0s;
   cursor: none;
   min-height: 100vh;
 }
@@ -37,7 +32,7 @@ body {
   position: fixed;
   width: 12px;
   height: 12px;
-  background: #1b263b;
+  background: #330610;
   border-radius: 50%;
   transition: all 0.05s;
 }
@@ -45,19 +40,19 @@ body {
 .cursor-large {
   width: 24px;
   height: 24px;
-  background: #415a77;
+  background: #330610;
   opacity: 0.5;
   transition: all 0.25s cubic-bezier(0.2, 0.6, 0.1, 0.9);
 }
 
 ::-moz-selection {
-  color: #E0E1DD;
-  background: #1b263b;
+  color: #e1cfa5;
+  background: #330610;
 }
 
 ::selection {
-  color: #E0E1DD;
-  background: #1b263b;
+  color: #e1cfa5;
+  background: #330610;
 }
 
 strong {
@@ -80,7 +75,7 @@ p {
 }
 
 a:not(.home-btn) {
-  color: #1b263b;
+  color: #330610;
   opacity: 0.6;
   text-decoration: none;
   width: -moz-max-content;
@@ -112,7 +107,7 @@ button {
   display: flex;
   position: relative;
   background: none;
-  color: #1b263b;
+  color: #330610;
   border: none;
   border-bottom: 0px solid #415a77;
   font-weight: bold;
@@ -183,7 +178,7 @@ main {
 
 .img-about {
   width: 30vw;
-  box-shadow: 0px 0px 20px -10px #1b263b;
+  box-shadow: 0px 0px 20px -10px #330610;
 }
 
 .home-btn,

@@ -89,6 +89,7 @@ function createAbout() {
   main.style.visibility = "hidden";
   setTimeout(() => {
     main.style.display = "none";
+    document.body.style.backgroundColor = "#e1cfa5";
     aboutPage.style.display = "flex";
     document.body.style.overflow = "visible";
     wrapper.style.paddingTop = "10vh";

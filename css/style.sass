@@ -1,11 +1,11 @@
 // https://coolors.co/0d1b2a-1b263b-415a77-778da9-e0e1dd
 
-$primary-color: #E0E1DD
-$secondary-color: #1b263b
+$primary-color: #e1cfa5
+$secondary-color: #330610
 $hover-color: #415a77
 
-:root
-  --ti-cursor-color: #{ $hover-color}
+// :root
+//   --ti-cursor-color: #{ $hover-color}
 
 @font-face
   font-family: Soehne
@@ -25,11 +25,11 @@ $hover-color: #415a77
   transition: all 0.5s ease-in-out
 
 body
-  background-color: $primary-color
+  background-color: #e0e1dd
   color: $secondary-color
   overflow: hidden
   user-select: none
-  transition-duration: 0s
+  // transition-duration: 0s
   cursor: none
   min-height: 100vh
 
@@ -46,7 +46,7 @@ body
 .cursor-large
   width: 24px
   height: 24px
-  background: $hover-color
+  background: $secondary-color
   opacity: .5
   transition: all .25s cubic-bezier(.2, .6, .1, .9)
   // z-index: 1
