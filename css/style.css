@@ -39,7 +39,7 @@ body {
   height: 12px;
   background: #0d1b2a;
   border-radius: 50%;
-  transition: all 0.1s cubic-bezier(0.2, 0.8, 0.05, 1);
+  transition: all 0.05s;
 }
 
 .cursor-large {

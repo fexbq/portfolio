@@ -8,6 +8,7 @@ const homeBtn = document.querySelector(".home-btn");
 const cursorSmall = document.querySelector(".cursor-small");
 const cursorLarge = document.querySelector(".cursor-large");
 
+// custom cursor
 const positionElement = (e) => {
   document.body.style.cursor = "none";
   const mouseY = e.clientY;
@@ -20,6 +21,11 @@ const positionElement = (e) => {
 };
 
 window.addEventListener("mousemove", positionElement);
+
+if (window.innerWidth < 600) {
+  cursorSmall.style.display = "none";
+  cursorLarge.style.display = "none";
+}
 
 // if hovering over a link, change cursorLarge to white
 const links = document.querySelectorAll("a");
