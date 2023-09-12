@@ -121,6 +121,7 @@ function homePressed() {
     main.style.display = "flex";
     window.scrollTo(0, 0);
     aboutPage.style.display = "none";
+    document.body.style.backgroundColor = "#e0e1dd";
     main.style.opacity = "1";
     main.style.visibility = "visible";
     wrapper.style.paddingTop = "35vh";
