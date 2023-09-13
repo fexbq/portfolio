@@ -7,11 +7,11 @@
   src: url("../fonts/soehne-fett.otf") format("opentype");
 }
 * {
-  font-family: "Soehne", system-ui, -apple-system, "Helvetica Neue", Arial,
-    sans-serif;
+  font-family: "Soehne", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
   text-decoration: none;
   margin: 0;
   padding: 0;
+  webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: all 0.5s ease-in-out;
 }
@@ -21,8 +21,8 @@ body {
   color: #330610;
   overflow: hidden;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   cursor: none;
   min-height: 100vh;
 }
@@ -211,8 +211,7 @@ main {
   transform: rotate(90deg) translateY(-0.25rem);
 }
 
-.projects-btn,
-.contact-btn {
+.projects-btn, .contact-btn {
   position: relative;
   bottom: 1px;
 }
@@ -261,4 +260,4 @@ main {
   .img-about {
     width: 80vw;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

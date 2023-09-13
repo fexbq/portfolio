@@ -27,16 +27,16 @@ if (window.innerWidth < 600) {
   cursorLarge.style.display = "none";
 }
 
-// if hovering over a link, change cursorLarge to white
+// if hovering over a link, change opacity of cursor
 const links = document.querySelectorAll("a");
 links.forEach((link) => {
   link.addEventListener("mouseover", () => {
-    cursorSmall.style.backgroundColor = "#415a77";
-    cursorLarge.style.backgroundColor = "#0d1b2a";
+    cursorSmall.style.opacity = ".5";
+    cursorLarge.style.opacity = ".2";
   });
   link.addEventListener("mouseout", () => {
-    cursorSmall.style.backgroundColor = "#0d1b2a";
-    cursorLarge.style.backgroundColor = "#415a77";
+    cursorSmall.style.opacity = "1";
+    cursorLarge.style.opacity = ".5";
   });
 });
 
