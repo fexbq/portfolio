@@ -4,8 +4,8 @@ $primary-color: #e1cfa5
 $secondary-color: #330610
 $hover-color: #415a77
 
-// :root
-//   --ti-cursor-color: #{ $hover-color}
+.ti-cursor
+  text-indent: .5rem
 
 @font-face
   font-family: Soehne
@@ -38,17 +38,16 @@ body
   width: 12px
   height: 12px
   background: $secondary-color
+  opacity: .8
   border-radius: 50%
   transition: all .05s
-  // z-index: 2
 
 .cursor-large
   width: 24px
   height: 24px
   background: $secondary-color
-  opacity: .5
+  opacity: .2
   transition: all .25s cubic-bezier(.2, .6, .1, .9)
-  // z-index: 1
 
 ::selection
   color: $primary-color
@@ -70,6 +69,7 @@ p
   line-height: 2rem
 
 a:not(.home-btn)
+  cursor: none
   color: $secondary-color
   opacity: .6
   text-decoration: none
@@ -100,6 +100,7 @@ button
   position: relative
   background: none
   color: $secondary-color
+  cursor: none
   border: none
   border-bottom: 0px solid $hover-color
   font-weight: bold
@@ -107,9 +108,8 @@ button
   transition-duration: 0.1s
 
   &:hover
-    cursor: none
     color: $hover-color
-    padding-bottom: 2px
+    padding-bottom: 4px
     border-bottom-width: 6px
 
 main
@@ -185,6 +185,7 @@ main
   padding: .6rem
   border: 2.5px solid transparent
   border-radius: 50%
+  margin-right: 2.5px
 
   &:hover
     padding: .6rem

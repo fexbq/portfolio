@@ -18,6 +18,8 @@ const positionElement = (e) => {
   cursorSmall.style.top = mouseY + "px";
   cursorLarge.style.left = mouseX - 6 + "px";
   cursorLarge.style.top = mouseY - 6 + "px";
+
+  cursorSmall.style.zIndex = "1";
 };
 
 window.addEventListener("mousemove", positionElement);
@@ -31,12 +33,12 @@ if (window.innerWidth < 600) {
 const links = document.querySelectorAll("a");
 links.forEach((link) => {
   link.addEventListener("mouseover", () => {
-    cursorSmall.style.opacity = ".5";
-    cursorLarge.style.opacity = ".2";
+    cursorSmall.style.opacity = ".4";
+    cursorLarge.style.opacity = ".1";
   });
   link.addEventListener("mouseout", () => {
-    cursorSmall.style.opacity = "1";
-    cursorLarge.style.opacity = ".5";
+    cursorSmall.style.opacity = ".8";
+    cursorLarge.style.opacity = ".2";
   });
 });
 
@@ -60,8 +62,8 @@ if (window.innerWidth > 600) {
 
 // Home
 new TypeIt("#header-home", {
-  speed: 60, // 60
-  startDelay: 800, // 800
+  speed: 0, // 60
+  startDelay: 0, // 800
   afterComplete: async () => {
     headerHome.style.marginTop = "-5vh";
     nav.style.marginTop = "5vh";
@@ -69,14 +71,14 @@ new TypeIt("#header-home", {
     nav.style.opacity = "1";
   },
 })
-  .type("I'm a developer", { delay: 1000 }) // 1000
-  .delete(9, { delay: 250 }) // 250
-  .type("designer", { delay: 900 }) // 900
-  .delete(10, { delay: 600 }) // 600
+  .type("I'm a developer", { delay: 0 }) // 1000
+  .delete(9, { delay: 0 }) // 250
+  .type("designer", { delay: 0 }) // 900
+  .delete(10, { delay: 0 }) // 600
   .type("<strong>Felix Nagy</strong>", {
     speed: 100,
   })
-  .pause(400) // 400
+  .pause(0) // 400
   .go();
 
 // About
@@ -127,5 +129,3 @@ function homePressed() {
     wrapper.style.paddingTop = "35vh";
   }, 500);
 }
-
-// TODO: MAKE WIDTH OF TEXT NEXT TO ABOUT IMG SMALLER WHEN ON MOBILE
