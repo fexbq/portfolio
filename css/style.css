@@ -145,14 +145,16 @@ main {
   width: 80vw;
 }
 
-.about-page {
+.about-page,
+.contact-page {
   display: none;
   flex-direction: column;
   align-items: center;
   visibility: hidden;
   opacity: 0;
 }
-.about-page__row {
+.about-page__row,
+.contact-page__row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -160,10 +162,12 @@ main {
   margin-bottom: 5rem;
   width: 80vw;
 }
-.about-page__row__left {
+.about-page__row__left,
+.contact-page__row__left {
   width: 45vw;
 }
-.about-page__links {
+.about-page__links,
+.contact-page__links {
   position: fixed;
   bottom: 0;
   left: 0;
