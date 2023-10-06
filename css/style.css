@@ -36,8 +36,8 @@ body {
   position: fixed;
   width: 12px;
   height: 12px;
-  background: #330610;
-  opacity: 0.8;
+  background: #415a77;
+  opacity: 0.6;
   border-radius: 50%;
   transition: all 0.05s;
 }
@@ -46,18 +46,8 @@ body {
   width: 24px;
   height: 24px;
   background: #330610;
-  opacity: 0.2;
+  opacity: 0.1;
   transition: all 0.25s cubic-bezier(0.2, 0.6, 0.1, 0.9);
-}
-
-::-moz-selection {
-  color: #e1cfa5;
-  background: #330610;
-}
-
-::selection {
-  color: #e1cfa5;
-  background: #330610;
 }
 
 strong {
@@ -141,6 +131,18 @@ main {
   opacity: 0;
 }
 
+#about-links,
+#contact-links {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 2rem;
+  transform: rotate(-90deg) translateX(50%) translateY(-150%);
+}
+
 #header-about {
   width: 80vw;
 }
@@ -166,17 +168,6 @@ main {
 .contact-page__row__left {
   width: 45vw;
 }
-.about-page__links,
-.contact-page__links {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0 2rem;
-  transform: rotate(-90deg) translateX(50%) translateY(-150%);
-}
 
 #row2 p {
   width: 30vw;
@@ -192,6 +183,7 @@ main {
 }
 
 .home-btn,
+.about-btn,
 .projects-btn,
 .contact-btn {
   display: flex;
@@ -200,6 +192,7 @@ main {
   transition: all 0.1s;
 }
 .home-btn:hover,
+.about-btn:hover,
 .projects-btn:hover,
 .contact-btn:hover {
   cursor: none;
@@ -259,9 +252,6 @@ main {
     margin-bottom: 2rem;
     width: 100%;
   }
-  .about-page__links {
-    display: none;
-  }
   .about-page #row2 {
     flex-direction: column-reverse;
   }
@@ -270,5 +260,9 @@ main {
   }
   .img-about {
     width: 80vw;
+  }
+  #about-links,
+  #contact-links {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
