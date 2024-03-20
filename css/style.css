@@ -1,14 +1,14 @@
 .ti-cursor {
-  text-indent: 0.5rem;
+  text-indent: 0.4rem;
 }
 
 @font-face {
-  font-family: Soehne;
-  src: url("../fonts/soehne.otf") format("opentype");
+  font-family: Reckless;
+  src: url("../fonts/RecklessNeue-Book.ttf") format("truetype");
 }
 @font-face {
-  font-family: Soehne-Fett;
-  src: url("../fonts/soehne-fett.otf") format("opentype");
+  font-family: Soehne;
+  src: url("../fonts/soehne.otf") format("opentype");
 }
 * {
   font-family: "Soehne", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
@@ -21,8 +21,8 @@
 }
 
 body {
-  background-color: #e0e1dd;
-  color: #330610;
+  background-color: #f5edea;
+  color: #171516;
   overflow: hidden;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -36,22 +36,21 @@ body {
   position: fixed;
   width: 12px;
   height: 12px;
-  background: #415a77;
-  opacity: 0.6;
+  background: #171516;
+  opacity: 0.5;
   border-radius: 50%;
-  transition: all 0.05s;
+  transition: all 0.02s;
 }
 
 .cursor-large {
   width: 24px;
   height: 24px;
-  background: #330610;
   opacity: 0.1;
-  transition: all 0.25s cubic-bezier(0.2, 0.6, 0.1, 0.9);
+  transition: all 0.2s cubic-bezier(0.2, 0.6, 0.1, 0.9);
 }
 
 strong {
-  font-family: "Soehne-Fett";
+  font-family: "Reckless";
 }
 
 .wrapper {
@@ -61,6 +60,7 @@ strong {
 }
 
 h1 {
+  font-family: "Reckless";
   font-size: 6.5rem;
 }
 
@@ -71,18 +71,18 @@ p {
 
 a:not(.home-btn) {
   cursor: none;
-  color: #330610;
+  color: #171516;
   opacity: 0.6;
   text-decoration: none;
   width: -moz-max-content;
   width: max-content;
   border: none;
-  border-bottom: 0px solid #415a77;
+  border-bottom: 0px solid #453b39;
   transition-duration: 0.1s;
 }
 a:not(.home-btn):hover {
   cursor: none;
-  color: #415a77;
+  color: #453b39;
   opacity: 0.4;
   padding-bottom: 4px;
   border-bottom-width: 3px;
@@ -103,16 +103,16 @@ button {
   display: flex;
   position: relative;
   background: none;
-  color: #330610;
+  color: #171516;
   cursor: none;
   border: none;
-  border-bottom: 0px solid #415a77;
+  border-bottom: 0px solid #453b39;
   font-weight: bold;
   font-size: 2rem;
   transition-duration: 0.1s;
 }
 button:hover {
-  color: #415a77;
+  color: #453b39;
   padding-bottom: 4px;
   border-bottom-width: 6px;
 }
@@ -179,7 +179,7 @@ main {
 
 .img-about {
   width: 30vw;
-  box-shadow: 0px 0px 20px -10px #330610;
+  box-shadow: 0px 0px 20px -10px #171516;
 }
 
 .home-btn,
@@ -196,7 +196,7 @@ main {
 .projects-btn:hover,
 .contact-btn:hover {
   cursor: none;
-  color: #415a77;
+  color: #453b39;
   padding-bottom: 0px;
   border-bottom: none;
 }
@@ -211,7 +211,7 @@ main {
 }
 .home-btn:hover {
   padding: 0.6rem;
-  border: 2.5px solid #415a77;
+  border: 2.5px solid #453b39;
   transform: rotate(90deg) translateY(-0.25rem);
 }
 
