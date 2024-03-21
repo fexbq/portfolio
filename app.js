@@ -43,7 +43,6 @@ const positionElement = (e) => {
 };
 
 window.addEventListener("mousemove", positionElement);
-
 if (window.innerWidth < 600) {
   cursorSmall.style.display = "none";
   cursorLarge.style.display = "none";
