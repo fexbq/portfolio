@@ -25,7 +25,7 @@ $hover-color: #453b39
   padding: 0
   webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  transition: all 0.5s ease-in-out
+  transition: all .35s ease-in-out
 
 body
   background-color: #f5edea
@@ -43,13 +43,12 @@ body
   background: $secondary-color
   opacity: .5
   border-radius: 50%
-  transition: all .02s
+  transition: none
 
 .cursor-large
   width: 24px
   height: 24px
   opacity: .1
-  transition: all .2s cubic-bezier(.2, .6, .1, .9)
 
 strong
   font-family: "Reckless"
@@ -76,6 +75,7 @@ a:not(.home-btn)
   border: none
   border-bottom: 0px solid $hover-color
   transition-duration: 0.1s
+  z-index: 9
 
   &:hover
     cursor: none
@@ -105,6 +105,7 @@ button
   font-weight: bold
   font-size: 2rem
   transition-duration: 0.1s
+  z-index: 1
 
   &:hover
     color: $hover-color
@@ -173,7 +174,7 @@ main
   display: flex
   font-size: 1.2rem
   letter-spacing: .05rem
-  transition: all .1s
+  transition: all .2s
 
   &:hover
     cursor: none
