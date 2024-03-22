@@ -77,8 +77,8 @@ if (window.innerWidth > 600) {
 
 // Home
 new TypeIt("#header-home", {
-  speed: 0, // 60
-  startDelay: 0, // 800
+  speed: 0, // 40
+  startDelay: 0, // 400
   afterComplete: async () => {
     headerHome.style.marginTop = "-5vh";
     nav.style.marginTop = "5vh";
@@ -86,10 +86,6 @@ new TypeIt("#header-home", {
     nav.style.opacity = "1";
   },
 })
-  .type("a developer", { delay: 0 }) // 1000
-  .delete(9, { delay: 0 }) // 250
-  .type("designer", { delay: 0 }) // 900
-  .delete(10, { delay: 0 }) // 600
   .type("<strong>Felix Groot</strong>", {
     speed: 100,
   })
@@ -113,7 +109,7 @@ function createAbout() {
     if (aboutVisited === false) {
       new TypeIt("#header-about", {
         speed: 120,
-        startDelay: 100,
+        startDelay: 200,
       })
         .type("About")
         .go();
@@ -143,7 +139,7 @@ function createContact() {
     if (contactVisited === false) {
       new TypeIt("#header-contact", {
         speed: 120,
-        startDelay: 100,
+        startDelay: 200,
       })
         .type("Contact")
         .go();
@@ -196,7 +192,7 @@ function visitAbout() {
   if (aboutVisited === false) {
     new TypeIt("#header-about", {
       speed: 120,
-      startDelay: 100,
+      startDelay: 200,
     })
       .type("About")
       .go();
@@ -226,7 +222,7 @@ function visitContact() {
   if (contactVisited === false) {
     new TypeIt("#header-contact", {
       speed: 120,
-      startDelay: 100,
+      startDelay: 200,
     })
       .type("Contact")
       .go();
